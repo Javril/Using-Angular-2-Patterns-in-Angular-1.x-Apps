@@ -1,0 +1,1 @@
+# Using-Angular-2-Patterns-in-Angular-1.x-Apps
