@@ -3,10 +3,12 @@ import 'normalize.css';
 
 import angular from 'angular';
 import appComponent from './app.component';
+import CommonModule from './common/common';
 import ComponentsModule from './components/components';
 
 //Create the module
 angular.module('app', [
+        CommonModule.name,
         ComponentsModule.name
     ])
     .component('app', appComponent);
