@@ -1,8 +1,11 @@
 import template from './categories.html';
+import controller from './categories.controller';
 import './categories.styl';
 
-const CategoriesComponent = {
-    template
+const categoriesComponent = {
+  template,
+  controller,
+  controllerAs: 'categoriesListCtrl'
 };
 
-export default CategoriesComponent;
+export default categoriesComponent;
