@@ -1,11 +1,18 @@
 class CategoriesModel {
-  constructor() {
+  constructor($q) {
+    'ngInject';
+
+    this.$q = $q;
     this.categories = [
       {"id": 0, "name": "Development"},
       {"id": 1, "name": "Design"},
       {"id": 2, "name": "Exercise"},
-      {"id": 3, "name": "Humor"}
+      {"id": 3, "name": "Admin"}
     ];
+  }
+
+  getCategories() {
+    return this.$q.when(this.categories);
   }
 }
 

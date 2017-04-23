@@ -2,7 +2,16 @@ class CategoriesController {
   constructor(CategoriesModel) {
     'ngInject';
 
-    this.categories = CategoriesModel.categories;
+    this.CategoriesModel = CategoriesModel;
+  }
+
+  $onInit() {
+    this.CategoriesModel.getCategories()
+      .then(categories => this.categories = categories);
+  }
+
+  onCategorySelected(category) {
+    console.log('CATEGORY SELECTED', category);
   }
 }
 
